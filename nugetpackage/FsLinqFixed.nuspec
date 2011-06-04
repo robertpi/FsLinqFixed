@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FsLinqFixed</id>
+    <version>2.1</version>
+    <authors>Robert Pickering (author of the NuGet package refer to http://fsharppowerpack.codeplex.com/ for the library authors)</authors>
+    <owners>Robert Pickering (author of the NuGet package refer to http://fsharppowerpack.codeplex.com/ for the library authors)</owners>
+    <projectUrl>https://github.com/robertpi/FsLinqFixed</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+	<licenseUrl>http://fsharppowerpack.codeplex.com/license</licenseUrl>
+    <tags>F# fsharp</tags>
+    <description>This is the F# PowerPack.Linq library, based on the F# PowerPack code drop under the OSS approved Apache 2.0 license from http://fsharppowerpack.codeplex.com/.</description>
+  </metadata>
+</package>
