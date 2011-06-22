@@ -520,21 +520,26 @@ module QuotationEvaluation =
             //     ConvExpr env (<@@  System.String.op_Equality(%%x1,%%x2) @@>)
 
             | GenericEqualityQ (_, _,[x1;x2]) 
-            | EqualsQ (_, _,[x1;x2]) ->     transComparison x1 x2 Expression.Equal Expression.Equal genericEqualityIntrinsic
+            //| EqualsQ (_, _,[x1;x2]) ->     transComparison x1 x2 Expression.Equal Expression.Equal genericEqualityIntrinsic
 
-            | GreaterQ (_, _,[x1;x2]) ->    transComparison x1 x2 Expression.GreaterThan Expression.GreaterThan genericGreaterThanIntrinsic
+            //| GreaterQ (_, _,[x1;x2]) ->    transComparison x1 x2 Expression.GreaterThan Expression.GreaterThan genericGreaterThanIntrinsic
 
-            | GreaterEqQ (_, _,[x1;x2]) ->  transComparison x1 x2 Expression.GreaterThanOrEqual Expression.GreaterThanOrEqual genericGreaterOrEqualIntrinsic
+            //| GreaterEqQ (_, _,[x1;x2]) ->  transComparison x1 x2 Expression.GreaterThanOrEqual Expression.GreaterThanOrEqual genericGreaterOrEqualIntrinsic
 
-            | LessQ (_, _,[x1;x2]) ->       transComparison x1 x2 Expression.LessThan Expression.LessThan genericLessThanIntrinsic
+            //| LessQ (_, _,[x1;x2]) ->       transComparison x1 x2 Expression.LessThan Expression.LessThan genericLessThanIntrinsic
 
-            | LessEqQ (_, _,[x1;x2]) ->     transComparison x1 x2 Expression.LessThanOrEqual Expression.LessThanOrEqual genericLessOrEqualIntrinsic
+            //| LessEqQ (_, _,[x1;x2]) ->     transComparison x1 x2 Expression.LessThanOrEqual Expression.LessThanOrEqual genericLessOrEqualIntrinsic
 
-            | NotEqQ (_, _,[x1;x2]) ->      transComparison x1 x2 Expression.NotEqual Expression.NotEqual genericNotEqualIntrinsic
+            //| NotEqQ (_, _,[x1;x2]) ->      transComparison x1 x2 Expression.NotEqual Expression.NotEqual genericNotEqualIntrinsic
 
+            | EqualsQ (_, _,[x1;x2]) -> Expression.Equal(ConvExpr env x1, ConvExpr env x2)       |> asExpr
+            | GreaterQ (_, _,[x1;x2]) -> Expression.GreaterThan(ConvExpr env x1, ConvExpr env x2)       |> asExpr
+            | GreaterEqQ (_, _,[x1;x2]) -> Expression.GreaterThanOrEqual(ConvExpr env x1, ConvExpr env x2)       |> asExpr
+            | LessQ (_, _,[x1;x2]) -> Expression.LessThan(ConvExpr env x1, ConvExpr env x2)       |> asExpr
+            | LessEqQ (_, _,[x1;x2]) -> Expression.LessThanOrEqual(ConvExpr env x1, ConvExpr env x2)       |> asExpr
+            | NotEqQ (_, _,[x1;x2]) -> Expression.NotEqual(ConvExpr env x1, ConvExpr env x2)       |> asExpr
             | NotQ (_, _,[x1])    -> Expression.Not(ConvExpr env x1)                                   |> asExpr
-
-
+            | NotQ (_, _,[x1])    -> Expression.Not(ConvExpr env x1)                                   |> asExpr
             | NegQ (_, _,[x1])    -> Expression.Negate(ConvExpr env x1)                                |> asExpr
             | PlusQ (_, _,[x1;x2]) -> Expression.Add(ConvExpr env x1, ConvExpr env x2)      |> asExpr
             | DivideQ (_, _,[x1;x2]) -> Expression.Divide (ConvExpr env x1, ConvExpr env x2)  |> asExpr
