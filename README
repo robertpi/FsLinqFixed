@@ -1,2 +1,6 @@
 This is the F# PowerPack.Linq library, based on the F# PowerPack code drop under the OSS approved Apache 2.0 license from http://fsharppowerpack.codeplex.com/.
 
+Bugs Fixed:
+1. Seq.skip is now implemented, see http://cs.hubfs.net/forums/thread/15865.aspx for details of bug
+2. Equality operators have now been implemented, see http://stackoverflow.com/questions/6434762/f-power-pack-linq-issue/6435214 for details of bug
+
