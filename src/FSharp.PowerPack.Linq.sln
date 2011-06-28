@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.PowerPack.Linq", "FSharp.PowerPack.Linq\FSharp.PowerPack.Linq.fsproj", "{4C2ED03B-5ACE-427B-8285-AD333E60F35E}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharp.PowerPack.LinqTests", "FSharp.PowerPack.LinqTests\FSharp.PowerPack.LinqTests.fsproj", "{D791B78E-A788-4138-A2A0-8BC0D760500E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{4C2ED03B-5ACE-427B-8285-AD333E60F35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C2ED03B-5ACE-427B-8285-AD333E60F35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C2ED03B-5ACE-427B-8285-AD333E60F35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D791B78E-A788-4138-A2A0-8BC0D760500E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D791B78E-A788-4138-A2A0-8BC0D760500E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D791B78E-A788-4138-A2A0-8BC0D760500E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D791B78E-A788-4138-A2A0-8BC0D760500E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
